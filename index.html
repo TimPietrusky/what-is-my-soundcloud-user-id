@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <title>Whay is my SoundCloud user_id?</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Tim Pietrusky">
+    <meta name="robots" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="description" content="A mix of CodePen, GitHub, Soundcloud and other shit.">
+
+    <meta property="og:title" content="Tim Pietrusky - The Live Stream of a Web Craftsman" />
+    <meta property="og:description" content="A mix of CodePen, GitHub, Soundcloud and other shit." />
+    <meta property="og:image" content="http://timpietrusky.github.com/img/tim-pietrusky-web-craftsman.jpg" />
+    <meta property="og:url" content="http://timpietrusky.github.com" />
+
+    <link rel="stylesheet" href="../crystallo/css/crystallo.css">
+    <link rel="stylesheet" href="css/soundcloud.css">
+
+    <link rel="shortcut icon" href="img/tim-pietrusky-web-craftsman.ico" type="image/x-icon" />
+</head>
+
+<body data-max-width="1400" data-theme="soundcloud" data-auto-extend="true">
+  <article data-high="1">
+    <section data-cols="1" data-valign="center">
+    	<div>
+	        <h1>What is my SoundCloud user_id?</h1>
+    	</div>
+    </section>
+  </article>
+
+<!-- button the get your user_id -->
+  <article data-high="">
+    <section data-cols="2" data-valign="center">
+      <div>
+        <button role="get your user_id" data-high="1">get your user_id</button>
+      </div>
+
+      <!-- Your user_id -->
+      <div>
+        <input role="user_id" placeholder="Your user_id"></input>
+
+        <p role="you">
+          Hey <b>you</b>! What's up?
+        </p>
+      </div>
+    </section>
+  </article>
+
+<!-- How does this work? -->
+  <article data-high="3">
+    <section data-cols="1" data-valign="center">
+      <div>
+        <h2>How does this work?</h2>
+      </div>
+    </section>
+
+    <section data-cols="3">
+      <div>
+         <h3>Authorize</h3>
+         <p>
+           After you push the button, a SoundCloud "Authorize access" pop-up opens.
+         </p>
+      </div>
+      <div>
+         <h3>Connect</h3>
+         <p>
+           Allow access. 
+         </p>
+      </div>
+      <div>
+         <h3>Get your id</h3>
+         <p>
+           Your <b>user_id</b> & <b>username</b> are shown above this info! (If you pushed the button...)
+         </p>
+      </div>
+    </section>
+  </article>
+
+<!-- How does this work? -->
+  <article data-high="4">
+    <section data-cols="1" data-valign="center">
+      <div>
+        <h2>Get your favorites</h2>
+      </div>
+    </section>
+
+    <section data-cols="1">
+      <div>
+        <pre>
+http://api.soundcloud.com/users/<b>{user_id}</b>/favorites.format?consumer_key=<b>{client_id}</b>
+        </pre>
+      </div>
+      <div>
+        <p>
+          You can get your <b>client_id</b> by <a href="http://soundcloud.com/you/apps/" target="_blank">registering a new app</a>. 
+        </p>
+      </div>
+    </section>
+  </article>
+
+<!-- Page powered by -->
+  <article data-high="3">
+    <section data-cols="2" data-valign="center">
+      <div>
+        <h2>This page is powered by crystallo</h2>
+        <p>
+           <a href="http://timpietrusky.github.com/crystallo/" target="_blank">crystallo</a> is a 
+           responsive micro framework to help you kick-start any form of web creation.
+        </p>
+      </div>
+      <div>
+        <h2>Spread the word</h2>
+        
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Crystallo - A responsive micro framework to help you kick-start your web creation" data-size="large">Tweet</a>
+        
+        <div class="g-plusone"></div>
+      </div>
+    </section>
+  </article>
+
+<!-- 2012 by Tim Pietrusky -->
+    <article>
+        <section data-cols="1">
+          <div>
+            <h3>2012 by Tim Pietrusky</h3>
+          <div>
+        </section>
+
+        <section data-cols="3">
+            <div>
+                <a href="https://github.com/TimPietrusky/what-is-my-soundcloud-user-id" target="_blank">
+                   <button>This on GitHub</button>
+                </a>
+            </div>
+
+            <div>
+                <a href="http://timpietrusky.com" target="_blank">
+                   <button>timpietrusky.com</button>
+                </a>
+            </div>
+
+            <div>
+                <a href="http://twitter.com/TimPietrusky" target="_blank">
+                   <button>@TimPietrusky</button>
+                </a>
+            </div>
+        </section>
+    </article>
+
+  <script src="http://connect.soundcloud.com/sdk.js"></script>
+  <script src="js/what-is-my-soundcloud-user-id.js"></script>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  <script type="text/javascript">(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
+
+  <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-5596313-4']);_gaq.push(['_setDomainName', 'timpietrusky.github.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+
+/* theme */
+body[data-theme='soundcloud'] {
+  font: 1.4em/1.6em "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+  color:#333;
+  background: #fff;
+  background-size:50% 200%;
+
+  h1 {
+    font: 2.1em/1.2em  'Montserrat', sans-serif;
+  }
+
+  h2 {
+    font: 1.45em/1.3em 'Montserrat', sans-serif;
+    letter-spacing:.05em;
+    margin:.25em 0;
+    color:#06C;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    letter-spacing:.05em;
+    margin:.75em 0 .15em 0;
+  }
+
+  a,
+  a:visited,
+  a:active {
+    text-decoration:none;
+    color:#999;
+    @include single-transition(all, .3s, ease-in-out, 0);
+  }
+
+  a:hover {
+    color:#333;
+  }
+
+  p, ul {
+    margin:.25em 0 .45em 0;
+  }
+
+  p[role="you"] {
+    display:none;
+    font-weight:bold;
+    color:#000;
+  }
+
+  button {
+    font: 1.4em/1em "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    padding: 1.4em .5em;
+    border: .15em solid #000;
+    border-radius: .15em;
+    background-color: #fcfcfc;
+    background-clip: padding;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0 .05em 0 black;
+    white-space: nowrap;
+    text-align: center; 
+
+    @include single-transition(all, .3s, ease-in-out, 0);
+    @include box-shadow(inset 0 .15em 0 rgba(255, 255, 255, .1), 0 .15em 0 rgba(255, 255, 255, .1));
+    @include background-image(linear-gradient(top, #414141, #292929));
+  }
+
+  button:hover {
+    border: .15em solid rgba(0, 0, 0, .4);
+    @include box-shadow(inset 0 0 0 .15em rgba(0, 0, 0, .3));
+  }
+
+  button[data-width="50"] {
+    width:50%;
+  }
+
+  button[data-width="33"] {
+    width:33.3%;
+  }
+
+  button[data-high='1'] {
+    background:#ff5d00;
+  }
+
+  button[data-high='2'] {
+  }
+
+  button[data-high='3'] {
+  }
+
+  button[data-high='4'] {
+  }
+
+  button[data-high='5'] {
+  }
+
+  input {    
+    width:75%;
+    font: 1.7em/1em "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    color: #666;
+    outline: 0;
+    border: .15px solid rgba(0, 0, 0, .3);
+    border-radius: .15em;
+    padding: .45em .25em;
+    background: #e6e6e6;
+    text-shadow: none;
+
+    @include box-shadow(0 .15em 0 rgba(255, 255, 255, .05), inset 0 .15em 0 rgba(0, 0, 0, .05));
+  }
+
+  article[data-text] {
+    margin-top:4em;
+  }
+
+  article[data-text]:after {
+    content:attr(data-text);
+    top:-1em;
+    left:.5em;
+    font:bold 3.2em/1em "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    color:rgba(0, 0, 0, .2);
+  }
+
+  article[data-high] {
+    @include single-transition(background, .3s, ease-in-out, 0);
+  }
+
+  article[data-high="1"] {
+    background-color: #222;
+    color: #ccc;
+    text-shadow: 0 1px 0 black;
+    margin-top:0;
+    margin-bottom:2em;
+    padding:2.45em 0; 
+
+    @include box-shadow(inset 0 -.25em 0 rgba(0, 0, 0, .5), 0 .05em .25em rgba(0, 0, 0, .4));
+    @include background-image(linear-gradient(top, rgba(71,71,71,1) 0%, rgba(54,54,54,1) 6%, rgba(38,38,38,1) 100%));
+  }
+
+  article[data-high="2"] {
+    background:rgba(254, 70, 0, .8);
+  }
+
+  article[data-high="3"] {
+  }
+
+  article[data-high="4"] {
+  }
+
+  article[data-high="5"] {
+  }
+
+  section {
+    padding: 0 1em;
+  }
+
+  section > div {
+    display:block;
+    padding:1.25em 1em .75em 1em;
+  }
+
+  section[data-valign='center'] {
+    text-align:center;
+  }
+
+  pre {
+    margin:0;
+    background:rgba(255, 255, 255, .4);
+    padding:1.4em 1em 0 1em;
+    padding-bottom:0;
+    white-space: pre-wrap;
+
+    @include box-shadow(0 0 0 .25em rgba(60, 60, 60, .5));
+  }
+
+  pre[data-text] {
+    position:relative;
+    margin-top:2em;
+  }
+
+  pre[data-text]:after {
+    content:attr(data-text);
+    top:-1.25em;
+    font: bold 1.25em/1em "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    letter-spacing:.05em;
+    color:#666;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+}
+
+/* big screens */
+@media screen and (max-width: 79em) {
+  body[data-theme='soundcloud'] {
+    section,
+    footer {
+      padding: 0 0;
+    }
+  }
+}
+
+/* small screens */
+@media screen and (max-width: 44em) {
+  body[data-theme='soundcloud'] {
+
+    font-size: 1.6em;
+
+    h1,
+    article[data-text]:after {
+      font-size:2.3em;
+    }
+
+    section > div {
+      padding: .5em;
+    }
+  }
+}
+
+@media screen and (max-width: 66em) {
+  body[data-theme='soundcloud'] {
+
+    font-size: 1.6em;
+
+    h1 {
+      font-size:2.3em;
+    }
+  }
+}
