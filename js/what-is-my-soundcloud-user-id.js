@@ -24,10 +24,10 @@ if (document.URL == "http://timpietrusky.github.local/what-is-my-soundcloud-user
 }
 
 /* production settings */
-if (document.URL == "http://timpietrusky.github.com/what-is-my-soundcloud-user-id/") {
+if (document.URL == "http://timpietrusky.github.io/what-is-my-soundcloud-user-id/") {
   config = {
     client_id : '5aec011faa8e46a01000cd23b8698858',
-    redirect_uri : 'http://timpietrusky.github.com/what-is-my-soundcloud-user-id/'
+    redirect_uri : 'http://timpietrusky.github.io/what-is-my-soundcloud-user-id/'
   };
 }
 
